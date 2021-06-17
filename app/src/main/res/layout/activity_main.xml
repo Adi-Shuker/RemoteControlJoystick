@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity"
-    android:orientation="horizontal"
-    >
-
-    <com.example.joystickremotecontrol.view.Joystick
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:id="@+id/joystick"
-        />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="276dp"
-        android:layout_height="38dp"
-        android:text="Connect"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="287dp" />
+    android:orientation="vertical"
+    tools:context=".view.MainActivity">
 
     <TextView
         android:id="@+id/textViewIP"
@@ -38,12 +23,19 @@
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="232dp" />
 
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="293dp"
-        android:layout_height="18dp"
+    <Button
+        android:id="@+id/button"
+        android:layout_width="266dp"
+        android:layout_height="72dp"
+        android:text="Connect"
         tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="638dp" />
+        tools:layout_editor_absoluteY="287dp" />
+
+    <com.example.joystickremotecontrol.view.Joystick
+        android:id="@+id/joystick"
+        android:layout_width="268dp"
+        android:layout_height="167dp"
+        android:visibility="visible" />
 
     <SeekBar
         android:id="@+id/seekBar2"
@@ -52,5 +44,12 @@
         android:rotation="90"
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="377dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="293dp"
+        android:layout_height="18dp"
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="638dp" />
 
 </LinearLayout>
