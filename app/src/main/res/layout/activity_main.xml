@@ -7,49 +7,101 @@
     android:orientation="vertical"
     tools:context=".view.MainActivity">
 
-    <TextView
-        android:id="@+id/textViewIP"
+    <EditText
+        android:id="@+id/editIP"
         android:layout_width="272dp"
         android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:text="IP"
         tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="176dp" />
+        tools:layout_editor_absoluteY="176dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
 
-    <TextView
-        android:id="@+id/textViewPort"
+    <EditText
+        android:id="@+id/editPort"
         android:layout_width="272dp"
         android:layout_height="43dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:text="Port"
         tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="232dp" />
+        tools:layout_editor_absoluteY="232dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/connectButton"
         android:layout_width="266dp"
-        android:layout_height="72dp"
+        android:layout_height="50dp"
         android:text="Connect"
         tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="287dp" />
+        tools:layout_editor_absoluteY="287dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
 
     <com.example.joystickremotecontrol.view.Joystick
         android:id="@+id/joystick"
         android:layout_width="268dp"
         android:layout_height="167dp"
-        android:visibility="visible" />
+        android:visibility="visible"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"/>
 
     <SeekBar
-        android:id="@+id/seekBar2"
-        android:layout_width="19dp"
-        android:layout_height="246dp"
-        android:rotation="90"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="377dp" />
+        android:id="@+id/throttle"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:max="200"
+        android:progress="1"
+        android:layout_gravity="center"/>
 
     <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="293dp"
-        android:layout_height="18dp"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="638dp" />
+        android:id="@+id/rudder"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:max="200"
+        android:progress="1"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Throttle 0" />
+
+    <TextView
+        android:id="@+id/textViewRudder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Rudder 0" />
+
+    <!-- <TextView
+         android:id="@+id/textViewTest"
+         android:layout_width="272dp"
+         android:layout_height="43dp"
+         android:text="testIP"
+         tools:layout_editor_absoluteX="92dp"
+         tools:layout_editor_absoluteY="232dp"
+         android:layout_marginTop="20dp"
+         android:layout_gravity="center"/>
+
+     <TextView
+         android:id="@+id/textViewTestPort"
+         android:layout_width="272dp"
+         android:layout_height="43dp"
+         android:text="testPort"
+         tools:layout_editor_absoluteX="92dp"
+         tools:layout_editor_absoluteY="232dp"
+         android:layout_marginTop="20dp"
+         android:layout_gravity="center"/>-->
+
 
 </LinearLayout>
