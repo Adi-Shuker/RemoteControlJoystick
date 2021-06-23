@@ -1,9 +1,10 @@
 package com.example.joystickremotecontrol.view;
 
-
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.content.SyncStatusObserver;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Display;
@@ -15,6 +16,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.example.joystickremotecontrol.R;
+import com.example.joystickremotecontrol.databinding.ActivityMainBinding;
 import com.example.joystickremotecontrol.model.Model;
 import com.example.joystickremotecontrol.view_model.ViewModel;
 
@@ -25,19 +27,18 @@ import java.util.concurrent.LinkedBlockingQueue;
 public class MainActivity extends AppCompatActivity{
 
     private ViewModel viewModel;
+    ActivityMainBinding binding;
     int min = -100, max = 100;
     String IP, Port;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         EditText editIP = (EditText)findViewById(R.id.editIP);
         EditText editPort = (EditText)findViewById(R.id.editPort);
         Button connectButton = (Button)findViewById(R.id.connectButton);
-        //TextView testIP = (TextView)findViewById(R.id.textViewTest);
-        //TextView testPort = (TextView)findViewById(R.id.textViewTestPort);
+
 
 
         connectButton.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +47,6 @@ public class MainActivity extends AppCompatActivity{
                 IP = editIP.getText().toString();
                 //testIP.setText("received IP: " + IP);
                 Port = editPort.getText().toString();
-                //testPort.setText("received Port: " + Port);
 
                 new Thread(new Runnable() {
                     @Override
@@ -66,21 +66,18 @@ public class MainActivity extends AppCompatActivity{
 
 
                             // textview for the throttle and the rudder
-                            TextView textView = (TextView)findViewById(R.id.textView);
-                            TextView textViewRudder = (TextView)findViewById(R.id.textViewRudder);
-
                             // create the throttle seekbar
                             SeekBar throttle = (SeekBar)findViewById(R.id.throttle);
                             // define the values of the throttle seekBar
                             throttle.setMax(max -min);
                             // update the viewModel when the throttle seekBar changed
-                            throttle.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                            binding.throttle.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                                 @Override
                                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                                     float val = (float)progress + (float)min;
                                     val = val / 100;
 
-                                    textView.setText("Throttle" + val);
+                                    //textView.setText("Throttle" + val);
                                     try {
                                         viewModel.setThrottle(val);
                                     } catch (InterruptedException e) {
@@ -88,25 +85,22 @@ public class MainActivity extends AppCompatActivity{
                                     }
 
                                 }
-
                                 @Override
                                 public void onStartTrackingTouch(SeekBar seekBar) {}
                                 @Override
                                 public void onStopTrackingTouch(SeekBar seekBar) {}
                             });
-
-
                             // create the rudder seekbar
                             SeekBar rudder = (SeekBar)findViewById(R.id.rudder);
                             // define the values of the throttle seekBar
                             rudder.setMax(max -min);
                             // update the viewModel when the rudder seekBar changed
-                            rudder.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+                            binding.rudder.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
                                 @Override
                                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                                     float val = (float)progress + (float)min;
                                     val = val / 100;
-                                    textViewRudder.setText("Rudder" + val);
+                                    //textViewRudder.setText("Rudder" + val);
                                     try {
                                         viewModel.setRudder(val);
                                     } catch (InterruptedException e) {

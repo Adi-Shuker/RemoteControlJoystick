@@ -22,7 +22,6 @@ public class Joystick extends SurfaceView implements SurfaceHolder.Callback, Vie
     private float hatRadius;
     private JoystickListener joystickCallback;
     private final int ratio = 5;
-    private int x;
 
     private void setupDimensions(){
         centerX = getWidth()/2;
@@ -35,7 +34,6 @@ public class Joystick extends SurfaceView implements SurfaceHolder.Callback, Vie
         super(context);
         getHolder().addCallback(this);
         setOnTouchListener(this);
-        this.x=x;
         if(context instanceof JoystickListener) {
             joystickCallback = (JoystickListener) context;
         }
@@ -68,7 +66,7 @@ public class Joystick extends SurfaceView implements SurfaceHolder.Callback, Vie
             canvas.drawColor(Color.TRANSPARENT, PorterDuff.Mode.CLEAR);
             colors.setARGB(255, 50, 50,50);
             canvas.drawCircle(centerX, centerY, baseRadius, colors);
-            colors.setARGB(255, 0, 0,50);
+            colors.setARGB(255, 0, 0,128);
             canvas.drawCircle(newX, newY, hatRadius, colors);
             getHolder().unlockCanvasAndPost(canvas);
         }
