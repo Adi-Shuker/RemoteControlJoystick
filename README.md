@@ -3,17 +3,18 @@
 # About The Project
 
 Remote Control Joystick is an Android application that allows the user to control and dirige an airplane on a flight simulator via an Android phone or tablet.<br>
-The remote allows, among other things, the control of the position of the rudders, the speed, the altitude, the direction, etc. <br>
+The remote allows, among other things, the control of the speed, the altitude, the direction, the position of the ailerons etc. <br>
 It also allows the user to see and move the airplane in different views.<br>
 
-Remote's features:
-• joystick to control the position of the ailerons (X axis) and the elevator (Y axis)
-• seek bars to change the speed (throttle) and the direction of the airplane (rudder)
+Remote's features: <br>
+• joystick to control the position of the ailerons (X axis) and the elevator (Y axis) <br>
+• seek bars to change the speed (throttle) and the direction of the airplane (rudder) <br>
 
 To run it, the user has to enter the IP address and port of the device on which the simulator is running.<br>
 To connect to the simulator and start flying, he has to click on the button *Connect*.<br> 
-
-
+<br>
+ ![alt tag](https://user-images.githubusercontent.com/81378726/123151129-d0868c80-d46b-11eb-82b0-f5d9f3e2d240.PNG)
+<br>
 
 
 # Getting Started
@@ -39,14 +40,16 @@ In the top of the screen enter the IP address and port of the device which runs 
 To connect to the simulator and start flying  press *Connect*.<br>
 Good fly! <br>
 <br>
- ![alt tag](https://user-images.githubusercontent.com/81378726/114764020-2227e200-9d6c-11eb-8b38-6225a6a9d2a0.jpg)
+ ![alt tag](https://user-images.githubusercontent.com/81378726/123151990-bdc08780-d46c-11eb-9910-ffcf7ba14539.PNG)
+<br>
+
 <br>
 
 # Code Design and UML:
 <br>
 
 
- ![alt tag](https://user-images.githubusercontent.com/81378726/114763777-dbd28300-9d6b-11eb-87f0-c4912a7c43ba.PNG)
+ ![alt tag](https://user-images.githubusercontent.com/81378726/123170755-8f01db80-d483-11eb-8081-d3ab7bef8b71.PNG)
 <br>
 
 The architecture of the app is based on the *MVVM* architectural pattern. <br>
