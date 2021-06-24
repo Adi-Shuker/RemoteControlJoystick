@@ -22,7 +22,7 @@ To connect to the simulator and start flying, he has to click on the button *Con
 # Prerequisites
 
 1) Install the flight simulator - FlightGear(https://www.flightgear.org/) version 2020.3.8. (for all OS)
-2) Open the FlightGear and in the Additional Settings write the lignes below and than press "fly" : <br>
+2) Open the FlightGear and in the Additional Settings write the lignes below and then press "fly" : <br>
 --telnet=socket,in,10,127.0.0.1,6400,tcp  <br>
 
 
@@ -49,7 +49,7 @@ Good fly! <br>
 <br>
 
 
- ![alt tag](https://user-images.githubusercontent.com/81378726/123170755-8f01db80-d483-11eb-8081-d3ab7bef8b71.PNG)
+ ![alt tag](https://user-images.githubusercontent.com/81378726/123220152-55a68b80-d4d6-11eb-8120-20bc7fc2144e.PNG)
 <br>
 
 The architecture of the app is based on the *MVVM* architectural pattern. <br>
