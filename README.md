@@ -2,15 +2,15 @@
 
 # About The Project
 
-Remote Control Joystick is an Android application that allows the user to control and dirige an airplane on a flight simulator via an Android phone or tablet.<br>
+Remote Control Joystick is an Android application that allows the user to control an airplane on a flight simulator via an Android phone or tablet.<br>
 The remote allows, among other things, the control of the speed, the altitude, the direction, the position of the ailerons etc. <br>
 It also allows the user to see and move the airplane in different views.<br>
 
 Remote's features: <br>
-• joystick to control the position of the ailerons (X axis) and the elevator (Y axis) <br>
+• a joystick to control the position of the ailerons (X axis) and the elevator (Y axis) <br>
 • seek bars to change the speed (throttle) and the direction of the airplane (rudder) <br>
 
-To run it, the user has to enter the IP address and port of the device on which the simulator is running.<br>
+To run it, the user has to enter the IP address and the port of the device on which the simulator is running.<br>
 To connect to the simulator and start flying, he has to click on the button *Connect*.<br> 
 <br>
  ![alt tag](https://user-images.githubusercontent.com/81378726/123151129-d0868c80-d46b-11eb-82b0-f5d9f3e2d240.PNG)
@@ -36,7 +36,7 @@ Options to download the app:
 # Usage
 
 Run the FlightGear and the Remote Control Joystick app. <br>
-In the top of the screen enter the IP address and port of the device which runs the simulator. <br>
+In the top of the screen enter the IP address and port of the device on which the simulator is running. <br>
 To connect to the simulator and start flying  press *Connect*.<br>
 Good fly! <br>
 <br>
@@ -61,7 +61,7 @@ The Model interacts with the FlightGear app via TCP connection like a client-ser
 
 # Video Explanation 
 
-https://youtu.be/230t_UPn8s0
+https://youtu.be/SJGhvTzQNaM
 
 # Contributors
 This program was developed by Adi-Shuker, Shana026
