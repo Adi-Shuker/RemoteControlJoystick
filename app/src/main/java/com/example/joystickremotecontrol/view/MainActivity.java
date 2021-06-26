@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         EditText editIP = (EditText)findViewById(R.id.editIP);
+
+        
         EditText editPort = (EditText)findViewById(R.id.editPort);
         Button connectButton = (Button)findViewById(R.id.connectButton);
 
@@ -76,14 +78,11 @@ public class MainActivity extends AppCompatActivity{
                                 public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                                     float val = (float)progress + (float)min;
                                     val = val / 100;
-
-                                    //textView.setText("Throttle" + val);
                                     try {
                                         viewModel.setThrottle(val);
                                     } catch (InterruptedException e) {
                                         e.printStackTrace();
                                     }
-
                                 }
                                 @Override
                                 public void onStartTrackingTouch(SeekBar seekBar) {}
@@ -107,7 +106,6 @@ public class MainActivity extends AppCompatActivity{
                                         e.printStackTrace();
                                     }
                                 }
-
                                 @Override
                                 public void onStartTrackingTouch(SeekBar seekBar) {}
                                 @Override
