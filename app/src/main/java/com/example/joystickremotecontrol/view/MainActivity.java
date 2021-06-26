@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 IP = editIP.getText().toString();
-                //testIP.setText("received IP: " + IP);
                 Port = editPort.getText().toString();
 
                 new Thread(new Runnable() {
